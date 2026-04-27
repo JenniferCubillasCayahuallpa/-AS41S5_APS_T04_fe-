@@ -1,0 +1,82 @@
+<div style="display: flex; min-height: 100vh; background-color: #f4f7f6;">
+  <app-sidebar style="width: 260px; flex-shrink: 0;"></app-sidebar>
+
+  <div style="flex-grow: 1; display: flex; justify-content: center; overflow-y: auto;">
+
+    <div style="width: 100%; max-width: 1200px; padding: 40px 20px;">
+
+      <div class="animals-container">
+        <div class="page-header" style="margin-bottom: 30px;">
+          <div class="header-titles">
+            <h2 style="font-size: 2rem; color: #1a202c; margin: 0;">Registro de Animales</h2>
+            <p style="color: #749671; margin-top: 5px;">Gestiona tu ganado con información detallada</p>
+          </div>
+          <button type="button" class="btn-new-animal" routerLink="/animals/form">
+            + Nuevo Animal
+          </button>
+        </div>
+
+        <div class="search-filter-bar">
+          <div class="search-input-wrapper" style="flex-grow: 1; position: relative;">
+            <svg class="icon-search" style="position: absolute; left: 12px; top: 12px;"
+              xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a0aec0"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" placeholder="Buscar por nombre o etiqueta..."
+              style="width: 100%; padding: 12px 12px 12px 45px; border-radius: 8px; border: 1px solid #e2e8f0; outline: none;">
+          </div>
+
+          <button class="btn-filter"
+            style="padding: 10px 20px; border-radius: 8px; border: 1px solid #e2e8f0; background: #f4f6f4; display: flex; align-items: center; gap: 8px; cursor: pointer;">
+            <svg class="icon-filter" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            Filtrar
+          </button>
+        </div>
+
+        <div class="animals-grid"
+          style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+
+          <div class="animal-card"
+            style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="card-header"
+              style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
+              <div class="animal-identity" style="display: flex; gap: 12px;">
+                <div class="animal-avatar" style="background: #2d5a27; padding: 10px; border-radius: 10px;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 style="margin: 0; font-size: 1.1rem;">Luna</h4>
+                  <span style="color: #718096; font-size: 0.9rem;">V-034 · Vaca</span>
+                </div>
+              </div>
+              <span class="badge"
+                style="background: #ebfbee; color: #2d5a27; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Producción</span>
+            </div>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; border-top: 1px solid #edf2f7; pt: 15px; margin-top: 15px; padding-top: 15px;">
+              <div style="text-align: center;">
+                <div style="color: #a0aec0; font-size: 0.75rem; text-transform: uppercase;">Raza</div>
+                <div style="font-weight: 600;">Holstein</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="color: #a0aec0; font-size: 0.75rem; text-transform: uppercase;">Edad</div>
+                <div style="font-weight: 600;">4 años</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="color: #a0aec0; font-size: 0.75rem; text-transform: uppercase;">Peso</div>
+                <div style="font-weight: 600;">520 kg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

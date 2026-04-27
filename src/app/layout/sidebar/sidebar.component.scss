@@ -1,0 +1,90 @@
+$bg-sidebar: #173f15;
+$primary-orange: #f59e0b;
+$text-light: #ffffff;
+$text-muted: #d1d5db;
+$hover-bg: rgba(255, 255, 255, 0.05);
+$hoveer-bg: rgba(247, 162, 42, 1);
+$active-bg: rgba(0, 0, 0, 0.15);
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: $bg-sidebar;
+  color: $text-light;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  position: fixed; // Se queda fijo a la izquierda
+  top: 0;
+  left: 0;
+  margin: 0;
+  border: none;
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding: 0 8px;
+
+    .logo-box {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo {
+        width: 120px;
+        height: 70px;
+      }
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: $text-muted;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+
+      .icon {
+        flex-shrink: 0;
+        transition: stroke 0.2s ease;
+      }
+
+      &:hover {
+        background-color: $hover-bg;
+        color: $text-light;
+      }
+
+      // Estilo para el botón del Panel Principal
+      &.active {
+        background-color: $active-bg;
+        color: $primary-orange;
+
+        .icon {
+          stroke: $primary-orange;
+        }
+      }
+    }
+  }
+}
